@@ -1,0 +1,109 @@
+LISTA DE ATRIBUTOS
+
+ENTIDADES:
+
+# TODO
+Serviço
+
+Perfil
+	-Status:
+		0. Aluno
+		1. Professor
+		2. Administrador
+		3. Coordenador
+Usuário
+	- Email
+	- Senha
+	- Data criação
+	- NUSP (Derivado)
+
+Pessoa
+	- NUSP
+	- CPF
+	- Nome
+	- Data de nascimento
+	- Endereço
+	- Email
+
+	Aluno
+		- Data de ingresso
+	Professor
+		- Departamento
+		- Data de ingresso
+		- [Coisas de carteira de trabalho]
+	Administrador [?]
+		- Data inicio
+		- Data fim
+
+Disciplina
+	- Sigla
+	- Departamento
+	- Ementa
+	- Semestre ideal
+	- Créditos
+		. Aula
+		. Trabalho
+
+Curso
+	- Sigla
+	- Nome
+	- Instituto
+	- Período
+
+Grade
+	- id
+
+	Obrigatoria
+		- id
+
+	Optativa
+		- id
+
+		Livre
+			- id
+
+		Eletiva
+			- id
+Trilha
+	- Nome
+	- Número de módulos necessários
+
+Módulo
+	- Nome
+	- Número de disciplinas necessárias
+
+Oferecimento
+	- id
+
+RELACIONAMENTOS:
+
+# TODO
+pf_se
+us_pf
+pe_us
+
+cursa
+	- Status
+		. Inteiro
+	- Nota
+	- Frequência
+
+ministra
+	- Período [semestre/ano]
+	- Horário
+
+planeja
+	- Semestre desejado [semestre/ano]
+	- Cursado
+
+# TODO
+administra
+
+rel_dis_cur
+	- id
+
+op_mod
+	- id
+
+tr_mo
+	- id
